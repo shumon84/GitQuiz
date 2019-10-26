@@ -40,10 +40,10 @@ $ git commit -a -m "add 1byte" # コミットする
 ※ コミットグラフとは、コミットを頂点、コミットの親子関係を辺とした有向非巡回グラフのことです。
 
 ---
-1. ![](x200_choice1.png)
+1. ![](images/x200_choice1.png)
 ---
-2. ![](x200_choice2.png)
+2. ![](images/x200_choice2.png)
 ---
-3. ![](x200_choice3.png)
+3. ![](images/x200_choice3.png)
 ---
-4. ![](x200_choice4.png)
+4. ![](images/x200_choice4.png)

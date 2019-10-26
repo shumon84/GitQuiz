@@ -4,16 +4,16 @@ Git リポジトリのサイズは、管理されているファイルが分か�
 まず次のコマンドで 100 B のファイルを 1 つだけ持つ Git リポジトリを作成します。
 
 ```
-$ mkdir repo && cd repo && git init                           # Git リポジトリを作成
-$ dd if=/dev/zero of=dummy.txt bs=100 count=1  # 100 B のファイル dummy.txt を作る
-$ git add dummy.txt && git commit -m "commit"    # コミットする
+$ mkdir repo && cd repo && git init           # Git リポジトリを作成
+$ dd if=/dev/zero of=dummy.txt bs=100 count=1 # 100 B のファイル dummy.txt を作る
+$ git add dummy.txt && git commit -m "commit" # コミットする
 ```
 
 その後、次のコマンドを10回繰り返します。
 
 ```
-$ echo -n a >> dummy.txt                                           # dummy.txt の末尾に 1 B 追加
-$ git commit -a -m "add 1byte"                                  # コミットする
+$ echo -n a >> dummy.txt       # dummy.txt の末尾に 1 B 追加
+$ git commit -a -m "add 1byte" # コミットする
 ```
 
 最終的に次のようなリポジトリが出来上がりました。

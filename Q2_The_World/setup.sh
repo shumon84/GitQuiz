@@ -2,6 +2,7 @@
 
 # git init だけしたリポジトリを作る
 repo_init(){
+    rm -rf $1
     mkdir $1
     cd $1
     git init
@@ -24,12 +25,12 @@ make_commit(){
     do
 	echo -n "a" >> dummy.txt
 	git add dummy.txt
-	sudo systemsetup -settime 11:00:00 # Mac の日時設定を変更
 	git commit -m "add 1byte"
     done
 }
 
-sudo systemsetup -setusingnetworktime off
+export GIT_COMMITTER_DATE="2020-01-01 10:11:22 +0900"
+export GIT_AUTHOR_DATE="2021-01-01 10:11:22 +0900"
 
 first_commit repo
 cd repo
@@ -39,4 +40,3 @@ git checkout develop
 make_commit 4
 cd ..
 
-sudo systemsetup -setusingnetworktime on
